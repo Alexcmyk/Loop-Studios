@@ -1,0 +1,303 @@
+/* Imports */
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+
+/* Reset */
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+nav ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+input,
+select {
+  vertical-align: middle;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Globals */
+
+:root {
+  --font-title: "Alata", sans-serif;
+  --font-body: "Josefin Sans", sans-serif;
+
+  --color-white: rgb(255, 255, 255);
+  --color-black: rgb(0, 0, 0);
+  --color-grey: rgb(140, 140, 140);
+  --color-darkGrey: rgb(105, 105, 105);
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-black);
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 25px;
+  position: relative;
+}
+
+a {
+  color: var(--color-grey);
+  text-decoration: none;
+}
+
+/* Components */
+
+h2,
+h3 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  color: inherit;
+  line-height: 1.05;
+  font-family: (var(--font-title));
+}
+
+/* Sections */
+
+/* --------- Header ---------- */
+
+#header {
+  position: relative;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+
+nav a {
+  display: inline-block;
+  color: #fff;
+  font-family: var(--font-title);
+  transition: 0.5s ease;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+nav a::after {
+  content: "";
+  bottom: 0;
+  display: block;
+  height: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+  border-radius: 2px;
+}
+
+nav a:hover::after {
+  width: 70%;
+}
+
+nav a:not(:first-child) {
+  margin-left: 30px;
+}
+
+/* Hover Styles */
+
+/* --------- Hero ---------- */
+
+.hero {
+  margin-top: -96px;
+  background-image: url(../images/desktop/image-hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: var(--color-white);
+  height: 90vh;
+  display: grid;
+  place-items: center;
+}
+
+.hero .hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.hero .hero-container h2 {
+  padding: 40px 73px;
+  font-size: 4.2rem;
+  border: 1px solid var(--color-white);
+  letter-spacing: 5px;
+}
+
+/* --------- Section Leader ---------- */
+
+/* --------- Section Creations ---------- */
+
+/* --------- footer ---------- */
+
+footer {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+/* Attribution */
+
+.attribution {
+  font-size: 0.6rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+
+/* Media Queries */
