@@ -162,6 +162,11 @@ select {
   text-rendering: optimizeLegibility;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
 /* Globals */
 
 :root {
@@ -259,7 +264,7 @@ nav a:not(:first-child) {
   background-image: url(../images/desktop/image-hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: right;
   color: var(--color-white);
   height: 90vh;
   display: grid;
@@ -274,11 +279,50 @@ nav a:not(:first-child) {
 .hero .hero-container h2 {
   padding: 40px 73px;
   font-size: 4.2rem;
-  border: 1px solid var(--color-white);
+  border: 2px solid var(--color-white);
   letter-spacing: 5px;
 }
 
 /* --------- Section Leader ---------- */
+
+.leader {
+  padding-top: 200px;
+  margin-bottom: 150px;
+}
+
+.leader-container {
+  position: relative;
+}
+
+.leader-container .leader-image {
+  z-index: -1;
+  width: 65%;
+}
+
+.leader-container .leader-text {
+  z-index: 1;
+  background-color: var(--color-white);
+  position: absolute;
+  top: 200px;
+  right: 0px;
+  max-width: 650px;
+  padding: 125px 80px 100px;
+}
+
+.leader-container .leader-text h3 {
+  font-size: 3.25rem;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.leader-container .leader-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.leader-container .leader-image img {
+  width: 100%;
+}
 
 /* --------- Section Creations ---------- */
 
