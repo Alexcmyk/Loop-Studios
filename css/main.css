@@ -213,10 +213,11 @@ h3 {
   font-size: 0.875rem;
   border: 2px solid var(--color-darkGrey);
   color: var(--color-black);
-  font-weight: 700;
+  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 5px;
   padding: 10px 25px;
+  transition: all 250ms;
 }
 
 .gradient {
@@ -264,11 +265,6 @@ nav a::after {
   background: #fff;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
-  border-radius: 2px;
-}
-
-nav a:hover::after {
-  width: 70%;
 }
 
 nav a:not(:first-child) {
@@ -276,6 +272,15 @@ nav a:not(:first-child) {
 }
 
 /* Hover Styles */
+
+.btn:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+nav a:hover::after {
+  width: 70%;
+}
 
 /* --------- Hero ---------- */
 
@@ -298,7 +303,7 @@ nav a:not(:first-child) {
 
 .hero .hero-container h2 {
   padding: 40px 73px;
-  font-size: 4.2rem;
+  font-size: clamp(3rem, 4vw, 4.2rem);
   border: 2px solid var(--color-white);
   letter-spacing: 5px;
 }
@@ -342,6 +347,10 @@ nav a:not(:first-child) {
 
 /* --------- Section Creations ---------- */
 
+.creations {
+  margin-bottom: 150px;
+}
+
 .creations-container .creations-header {
   display: flex;
   justify-content: space-between;
@@ -376,16 +385,55 @@ nav a:not(:first-child) {
 footer {
   background-color: var(--color-black);
   color: var(--color-white);
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.footer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.footer-header .socials {
+  display: flex;
+  align-items: center;
+}
+
+.footer-header .socials a:not(:first-child) {
+  margin-left: 20px;
+}
+
+.footer-map {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-grey);
+}
+
+.footer-map .site-links a {
+  font-size: 1.05rem;
+  transition: color 250ms;
+}
+
+.footer-map .site-links a:hover {
+  color: var(--color-white);
+}
+
+.footer-map .site-links a:not(:last-child) {
+  margin-right: 30px;
 }
 
 /* Attribution */
 
 .attribution {
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: rgb(87, 140, 255);
   text-decoration: none;
 }
 
