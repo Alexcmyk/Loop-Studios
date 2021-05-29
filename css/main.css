@@ -286,13 +286,11 @@ nav a:hover::after {
   top: 30px;
   right: 30px;
   z-index: 101;
+  cursor: pointer;
 }
 
-.header-inner .mobile-nav span {
-  display: inline-block;
-  width: 30px;
-  height: 3px;
-  background-color: var(--color-white);
+.header-inner .mobile-nav img {
+  width: 25px;
 }
 
 .header-inner .mobile-nav span:not(:last-child) {
